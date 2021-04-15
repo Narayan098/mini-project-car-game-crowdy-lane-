@@ -41,23 +41,11 @@ move5=pygame.mixer.Sound(r'sound\carmove5.wav')
 move6=pygame.mixer.Sound(r'sound\carmove6.wav')
 
 
-while(1):
+while True:
 
-
-    
-    s=random.randint(1,6)
-    if s==1: 
-        pygame.mixer.Sound.play(move1)
-    if s==2: 
-        pygame.mixer.Sound.play(move2)
-    if s==3:  
-        pygame.mixer.Sound.play(move3)
-    if s==4:  
-        pygame.mixer.Sound.play(move4)
-    if s==5:  
-        pygame.mixer.Sound.play(move5)
-    if s==6:
-        pygame.mixer.Sound.play(move6)
+ 
+    pygame.mixer.Sound.play(move1)
+   
           
 
 
@@ -182,12 +170,6 @@ while(1):
             if( (ox  <=150 and ox>=50) and (oy == y )or((ox2  <=150 and ox2>=50) and (oy2 == y ))or ((ox3  <=150 and ox3>=50) and (oy3 == y ))):
 
                 pygame.mixer.Sound.stop(move1)
-                pygame.mixer.Sound.stop(move2)
-                pygame.mixer.Sound.stop(move3)
-                pygame.mixer.Sound.stop(move4)
-                pygame.mixer.Sound.stop(move5)
-                pygame.mixer.Sound.stop(move6)
-                
                 pygame.mixer.Sound.play(crash_sound)
               
                 draw_text('CRASHED!',200,640,200)
